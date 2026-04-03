@@ -61,11 +61,21 @@ public class AcademyDemo {
         System.out.println("--- Instanceof Demonstration ---");
         System.out.println("norbert instanceof BabyDragon: " + (norbert instanceof BabyDragon)); // True
         System.out.println("norbert instanceof Creature: " + (norbert instanceof Creature)); // True
-        System.out.println("fawkes instanceof Dragon: " + (fawkes instanceof Dragon)); // False
-        System.out.println("smaug instanceof GroundCreature: " + (smaug instanceof GroundCreature)); // False
+        System.out.println("griffin instanceof Dragon: " + (griffin instanceof Dragon)); // False
+        System.out.println("baseCreature instanceof GroundCreature: " + (baseCreature instanceof GroundCreature)); // False
         System.out.println("centaur instanceof Creature: " + (centaur instanceof Creature)); // True
         System.out.println();
 
-        //lmn on my own
+        // (I) Include at least one example where a Creature reference refers to a BabyDragon ojbect.
+        Creature creatureTest = new BabyDragon();
+        FlyingCreature test1 = new Phoenix();
+
+        // n
+        Creature simpleCreature = new BabyDragon("Bebe", 1, new Artifact(), 0,0,0,"Milk");
+        simpleCreature.makeSound();
+        if(simpleCreature instanceof BabyDragon){
+            BabyDragon baby = (BabyDragon) simpleCreature;
+            baby.play();
+        }
     }
 }
